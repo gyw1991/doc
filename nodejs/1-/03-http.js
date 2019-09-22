@@ -5,7 +5,11 @@ const server = http.createServer()
 // 监听
 server.on('request', function (req, res) {
   console.log('收到请求')
+
   console.log(req.url)
+  //res对象的中的write方法
+  res.write('hello')
+  res.end()
 })
 // 绑定端口号
 server.listen(3000, function () {
