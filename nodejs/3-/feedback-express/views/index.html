@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>feedback</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .container .btn {
+      color: white !important;
+    }
+    .list-group .list-group-item {
+      width: 1000px;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>留言板 <span class="badge badge-primary">message</span></h1>
+  <hr width="100%">
+  <ul class="list-group">
+    {{each}}
+      <li class="list-group-item">
+        <span class="name">{{ $value.name }}： </span>
+        {{ $value.msg }}
+        <span class="float-right">{{ $value.date }}</span>
+      </li>
+    {{/each}}
+  </ul>
+  <a class="btn btn-primary" href="/post">发表留言</a>
+</div>
+</body>
+</html>
