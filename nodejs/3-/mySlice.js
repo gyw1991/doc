@@ -19,3 +19,5 @@ Array.prototype.mySlice = function () {
 let foo = { 0: 'a', 1: 'b', 2: 'c', length: 3 }
 // 将slice方法中的this指向指定伪数组对象
 console.log([].mySlice.call(foo))
+
+

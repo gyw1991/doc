@@ -28,7 +28,7 @@
   <h1>留言板 <span class="badge badge-primary">message</span></h1>
   <hr width="100%">
   <ul class="list-group">
-    {{each}}
+    {{each comments}}
       <li class="list-group-item">
         <span class="name">{{ $value.name }}： </span>
         {{ $value.msg }}
